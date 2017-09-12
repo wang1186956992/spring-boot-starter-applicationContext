@@ -12,12 +12,9 @@ public class ApplicationUtil {
         return applicationContext;
     }
 
-    public static void setApplicationContext(ApplicationContext applicationContext) {
-        ApplicationUtil.applicationContext = applicationContext;
-    }
 
     public static ApplicationUtil init(ApplicationContext app) {
-        setApplicationContext(app);
+        applicationContext = app;
         return new ApplicationUtil();
     }
 }
