@@ -1,5 +1,6 @@
 package com.learn.application.context;
 
+import com.learn.application.context.config.ApplicationUtil;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -21,7 +22,7 @@ public class SpringContextUtil {
      * @return
      */
     public static Object getBean(String name){
-        return ContextLoader.getCurrentWebApplicationContext().getBean(name);
+        return ApplicationUtil.getApplicationContext().getBean(name);
     }
 
     /**
@@ -31,7 +32,7 @@ public class SpringContextUtil {
      * @return
      */
     public static <T> T getBean(Class<T> tClass){
-        return ContextLoader.getCurrentWebApplicationContext().getBean(tClass);
+        return ApplicationUtil.getApplicationContext().getBean(tClass);
     }
 
     /**
@@ -42,7 +43,7 @@ public class SpringContextUtil {
      * @return
      */
     public static <T> T getBean(String name,Class<T> tClass){
-        return ContextLoader.getCurrentWebApplicationContext().getBean(name,tClass);
+        return ApplicationUtil.getApplicationContext().getBean(name,tClass);
     }
 
     /**
