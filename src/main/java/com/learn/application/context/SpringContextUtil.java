@@ -60,7 +60,7 @@ public class SpringContextUtil {
       * @return
      */
     public static HttpServletResponse getResponse(){
-        HttpServletResponse resp = ((ServletWebRequest)RequestContextHolder.getRequestAttributes()).getResponse();
+        HttpServletResponse resp = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getResponse();
         return resp;
     }
 

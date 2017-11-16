@@ -15,7 +15,7 @@
         <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     <!--</parent>-->
 
-    
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
